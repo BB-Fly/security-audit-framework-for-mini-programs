@@ -1,0 +1,4 @@
+潜在危险：nmap: Potentially vulnerable ports found at the following URL: mmbiz.qpic.cn port: 8080 http-proxy
+潜在危险：nmap checked! Potentially vulnerable ports found: mmbiz.qpic.cn
+!!!!!!!!Please check the log: logs\None-2024-04-08-16-21-47\nmap\1.txt
+

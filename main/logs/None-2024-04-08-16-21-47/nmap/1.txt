@@ -1,0 +1,11 @@
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-04-08 16:23 中国标准时间
+Nmap scan report for mmbiz.qpic.cn (112.28.235.80)
+Host is up (0.020s latency).
+Other addresses for mmbiz.qpic.cn (not scanned): 112.26.228.63 183.240.181.247
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+
+Nmap done: 1 IP address (1 host up) scanned in 4.90 seconds

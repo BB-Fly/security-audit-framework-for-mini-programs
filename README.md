@@ -2,10 +2,26 @@
 
 __1. 安装py包__
 
-    pass
+    pip3 install mitmproxy
+
+    其余包需求参考相关开源工具
+
 __2. 安装开源软件__
 
-    pass
+    开源工具列表：
+    XSStrike  https://github.com/s0md3v/XSStrike
+    sqlmap  https://sqlmap.org/
+    dirsearch  https://github.com/maurosoria/dirsearch
+    ZAP  https://www.zaproxy.org/
+    fuxploider  https://github.com/almandin/fuxploider
+    bolt  https://github.com/s0md3v/Bolt
+    nmap  https://nmap.org/man/zh/
+    CRLF-Injection-Scanner  https://github.com/MichaelStott/CRLF-Injection-Scanner
+    afrog  https://github.com/zan8in/afrog
+
+    除ZAP外，其余所有工具需要安装在 /tools 目录下
+
+
 __3. 修改配置文件__
 
     config文件夹下有配置文件
